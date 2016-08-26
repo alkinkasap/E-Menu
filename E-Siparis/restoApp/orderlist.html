@@ -1,0 +1,31 @@
+﻿
+<i style="font-size:32px;" class="fa fa-shopping-bag">   <label class="orderbaslik">    Sipariş Detayları</label></i>
+<h1 ng-hide="isEmpty()">Hiç Bir Sipariş Oluşturmadınız! Bu Yüzden Hesap Yapmamıza gerek Yok :)</h1>
+<div style="margin-top:20px;" class="main">
+    <div class="listem" ng-repeat="sec in ortak.GelenListe">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <img style="width:150px; height:100px; margin-top:10px;" class="img-responsive img-circle" src="/images/{{sec.url}}" />
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label style="margin-top:35px;">{{sec.Ad}} Adlı Siparişinizin Fiyatlandırması...</label>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <input max="9" min="1" id="{{sec.Id}}" ng-model="sec.adet" style="margin-top:35px;" class="form-control" value="{{sec.adet}}" type="number" />
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <h3 ng-model="sec.fiyat" style="margin-top:35px;">{{sec.fiyat}} $</h3>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <h3 ng-model="sec.TotalFiyat" style="margin-top:35px;">{{sec.fiyat*sec.adet}} $</h3>
+        </div>
+    </div>
+    <div style="color:white;" ng-model="TotalPrice" class="col-lg-offset-10 col-lg-3">
+        <h1 ng-show="isEmpty()">Toplam : {{getTotal()}} $</h1>
+        <button  ng-click="Tamamlandi()" ng-show="isEmpty()"  class="btn btn-success">Ödeme Yap</button>
+        <button ng-click="cancel()" ng-show="isEmpty()" class="btn btn-danger">İptal Et</button>
+    </div>
+</div>
+
+
+

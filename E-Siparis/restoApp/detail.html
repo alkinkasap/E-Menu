@@ -1,0 +1,50 @@
+﻿
+<div class="row">
+    <div id="slider" class="col-lg-12">
+        <div ng-repeat="sec in seciliYemekler" class="col-lg-1 col-md-1 col-xs-2 col-sm-2 nopadding">
+            <img style="width:100px; height:80px;" class="img-responsive" src="/images/{{sec.url}}" />
+            <label style="font-size:16px">{{sec.fiyat}}$ - <label style="color:palevioletred">{{sec.adet}} adet</label></label>
+        </div>
+
+    </div>
+</div>
+<div class="bgr">
+    <div style="height:240px" class="detail">
+        <div ng-click="minus()"  style="background-color:#BDBDBD;height:240px" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nopadding3 gerigit">
+            <i class="fa fa-reply" style="font-size:50px;color:#880E4F; margin-top:100%; margin-left:20px;"></i>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3 nopadding3">
+            <img style="min-height:240px;" class="img-responsive" src="/images/{{SelectedFood.url}}" />
+        </div>
+        <div  style="background-color:white; height:100%;" class="col-lg-4 col-md-4 col-xs-7 col-sm-7 nopadding3">
+            <h1 style="color:#880E4F;padding-left:10px">{{SelectedFood.Ad}}</h1>
+            <h4 style="color:#6D4C41;padding-left:30px">{{SelectedFood.Ad}} Adlı Yemeğin Detayını Görüntülüyorsunuz...</h4>
+            <hr />
+            <h3 style="color:#6D4C41;padding-left:30px;">  Fiyatı : {{SelectedFood.fiyat}}$</h3>
+            <a href="index.html#main" style="margin-left:30px;" class="btn btn-success">Listeye Dön</a>
+        </div>
+        <div style="background-color:white;border-left-style:groove; height:100%; color:#6D4C41; font-size:18px;" class="col-lg-3 col-md-3  hidden-sm hidden-xs nopadding3">
+            <h1 style="color:#6D4C41;padding-left:30px">Enerji Tablosu</h1>
+            <ul>
+                <li>
+                    Kalori:10
+                </li>
+                <li>
+                    Enerji:10
+                </li>
+                <li>
+                    Protein:10
+                </li>
+                <li>
+                    Karbonhidrat:10
+                </li>
+                <li>
+                    Gramaj:5
+                </li>
+            </ul>
+        </div>
+        <div ng-click="plus()" style="background-color:#BDBDBD;height:240px" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 nopadding3 gerigit">
+            <i class="fa fa-share" style="font-size:50px;color:#880E4F; margin-top:100%; margin-left:20px;"></i>
+        </div>
+    </div>
+</div>

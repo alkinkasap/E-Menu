@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html ng-app="RestoApp">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Ubuntu+Condensed" rel="stylesheet">
+    <link href="Content/application.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Addons/sweetalert.css" rel="stylesheet" />
+    <title>SrnAngular Menu</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-controller="BaseController">
+    <div class="container">
+        <div class="navbar shop">
+            <div class="navbar-header navbar-left">
+                <a style="color:white" href="index.html#/"><h2>Serhan Erturk Online Menu</h2></a>
+                <p>Basit Menü Uygulaması-AngularJs</p>
+                <input type="text" placeholder="Herhangi bir Değere göre filtreleyebilirsiniz..."  class="form form-control" ng-model="searchTerm" />
+            </div>
+            <div style="margin-right:30px" class="navbar-right">
+                <div><h4><i class="fa fa-shopping-bag"></i> Shopping Cart</h4><h2>{{ortak.Count}} Farklı Tür</h2><a href="index.html#checkout" class="btn btn-danger">Sepete Git</a></div>
+            </div>
+        </div>
+        <div ng-view></div>
+        <hr />
+        <div class="footer"><p>Serhan Ertürk 26.08.2016</p></div>
+    </div>
+
+
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="Addons/sweetalert-dev.js"></script>
+    <script src="Addons/sweetalert.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="AngularJs/Module.js"></script>
+    <script src="AngularJs/RouteProvider.js"></script>
+    <script src="AngularJs/BaseController.js"></script>
+    <script src="AngularJs/DetailController.js"></script>
+    <script src="AngularJs/OrderController.js"></script>
+</body>
+</html>

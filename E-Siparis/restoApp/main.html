@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="row">
+        <div id="slider" class="col-lg-12">
+            <div ng-repeat="sec in seciliYemekler" class="col-lg-1 col-md-1 col-xs-2 col-sm-2 nopadding">
+                <img style="width:100px; height:80px;" class="img-responsive" src="/images/{{sec.url}}" />
+                <label style="font-size:16px">{{sec.fiyat}}$ - <label style="color:palevioletred">{{sec.adet}} adet</label></label>
+            </div>
+
+        </div>
+    </div>
+    <div style="min-height:350px;" class="col-lg-3 col-md-3 col-xs-12 col-sm-6 test nopadding2" ng-repeat="yemek in yemekler |filter:searchTerm">
+        <div class="block">
+            <center>
+                <a href="index.html#detail/{{yemek.Id}}">
+                    <div class="image" style="min-height:160px;">
+                        <i style="font-size:72px;" class="fa fa-eye play"><p class="pdetay">Detay Goruntule</p></i>
+                        <img style="height:220px; border-radius:15px; box-shadow:unset;" class="img-responsive" src="/images/{{yemek.url}}" />
+                    </div>
+                </a>
+            </center>
+            <center><h4 style="color:#ff6600">{{yemek.Ad}}</h4></center>
+            <center> <h3 style="color:indianred">{{yemek.fiyat}} $</h3></center>
+            <center> <div style="padding-top:6px; border-radius:10px;" id="{{yemek.Id}}" ng-click="Ekle($event)" class="ekle">Siparise Ekle</div></center>
+        </div>
+    </div>
+</div>
